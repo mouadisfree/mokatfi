@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void increment(int a)
+void increment(int *p)
 {
-	a = a + 1;
+	*p = *p + 1;
 }
 
 int main()
 {
 	int a;
 	a = 10;
-	increment(a);
+	increment(&a);
 	printf("a = %d\n", a);
 }
